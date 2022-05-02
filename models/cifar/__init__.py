@@ -62,3 +62,4 @@ Densenet-161             22.35           6.20
 """
 
 from .iebn_resnet import *
+from .resnet import *

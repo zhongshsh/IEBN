@@ -45,3 +45,8 @@ python cifar.py -a iebn_resnet --dataset cifar100 --block-name bottleneck --dept
 
 ## Acknowledgments
 Many thanks to [bearpaw](https://github.com/bearpaw) for his simple and clean [Pytorch framework](https://github.com/bearpaw/pytorch-classification) for image classification task.
+
+跑一个resnet164+bn
+CUDA_VISIBLE_DEVICES=1 python cifar.py -a resnet --dataset cifar100 --block-name bottleneck --depth 164 --epochs 164 --schedule 81 122 --gamma 0.1 --wd 1e-4 --checkpoint checkpoints/cifar100/resnet-org
+跑一个resnet164+iebn
+CUDA_VISIBLE_DEVICES=0 python cifar.py -a iebn_resnet --dataset cifar100 --block-name bottleneck --depth 164 --epochs 164 --schedule 81 122 --gamma 0.1 --wd 1e-4 --checkpoint checkpoints/cifar100/resnet-164-iebn

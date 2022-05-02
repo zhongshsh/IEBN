@@ -1,0 +1,6 @@
+/checkpoints/
+/models/__pycache__/
+/models/cifar/__pycache__/
+/tmp/
+/utils/__pycache__/
+
